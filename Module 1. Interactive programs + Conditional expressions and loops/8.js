@@ -7,13 +7,13 @@ let leapYear = "<ol>"
 while (startYear <= endYear) {
     if (startYear % 100 === 0) {
         if (startYear % 4 === 0 && startYear % 400 === 0) {
-            leapYear += `<li>${startYear}</li>`;
+            document.getElementById("list1").innerHTML += `<li>${startYear}</li>`;
             startYear++
         }
     }
 
     else if (startYear % 4 === 0) {
-        leapYear += `<li>${startYear}</li>`;
+        document.getElementById("list1").innerHTML += `<li>${startYear}</li>`;
         startYear++
     }
     else {
@@ -21,5 +21,4 @@ while (startYear <= endYear) {
     }
 }
 
-leapYear += '</ol>'
-document.querySelector('#list1').innerHTML = leapYear
+document.getElementById("list1").innerHTML += '</ol>';
