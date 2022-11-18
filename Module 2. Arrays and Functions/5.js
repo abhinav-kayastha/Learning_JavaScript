@@ -4,7 +4,8 @@ let nums = [];
 
 while (true) {
     let num = parseInt(prompt('Enter a number. Enter previously entered number to exit.'));
-    if (num in nums) {
+    if (nums.includes(num)) {
+        alert('Number is already been given.');
         break;
     }
 
@@ -12,6 +13,8 @@ while (true) {
         nums.push(num);
     }
 }
+
+nums.sort()
 
 let i = 0;
 
